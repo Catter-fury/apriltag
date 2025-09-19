@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmake:*)",
+      "Bash(apriltag_demo:*)",
+      "Bash(sudo ldconfig:*)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(gcc:*)",
+      "Bash(./test_apriltag)",
+      "Bash(convert:*)",
+      "Bash(export:*)",
+      "Bash(./detect_tags converted_images/)",
+      "Bash(make:*)"
+    ],
+    "deny": []
+  }
+}

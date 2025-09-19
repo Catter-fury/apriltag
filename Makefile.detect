@@ -1,0 +1,27 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -O2 -g
+LDFLAGS = -lm -lpthread
+
+# AprilTag library paths
+APRILTAG_LIBS = -lapriltag
+APRILTAG_INCLUDES = -I.
+
+# Source files
+DETECT_SRC = detect_tags.c
+
+# Output executable
+DETECT_TARGET = detect_tags
+
+# Build target
+$(DETECT_TARGET): $(DETECT_SRC)
+	$(CC) $(CFLAGS) $(APRILTAG_INCLUDES) -o $@ $< $(APRILTAG_LIBS) $(LDFLAGS)
+
+# Clean target
+clean:
+	rm -f $(DETECT_TARGET)
+
+# Run target
+run: $(DETECT_TARGET)
+	./$(DETECT_TARGET)
+
+.PHONY: clean run
